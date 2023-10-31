@@ -4,4 +4,16 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObject\BusinessObject.csproj" />
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Book\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Views\Cart\" />
+    <Folder Include="Views\Order\" />
+  </ItemGroup>
+
 </Project>
