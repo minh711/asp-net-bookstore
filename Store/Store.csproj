@@ -10,10 +10,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Book\" />
     <Folder Include="Views\Account\" />
     <Folder Include="Views\Cart\" />
     <Folder Include="Views\Order\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
 </Project>
