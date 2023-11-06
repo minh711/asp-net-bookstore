@@ -13,5 +13,6 @@ namespace DataAccess.Repository
         public void AddNew(Cart cart);
         public void Delete(Cart cart);
         public void Update(Cart cart);
+        public int CountTotal(int accountId);
     }
 }

@@ -28,7 +28,7 @@ namespace DataAccess
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=123456;database=PRN_Group03");
+                optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=123456;database=PRN_Group03;TrustServerCertificate=true");
             }
         }
 

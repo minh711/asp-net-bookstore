@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -14,5 +15,8 @@ namespace BusinessObject
         public int? AccountId { get; set; }
 
         public virtual Account Account { get; set; }
+        
+        [NotMapped]
+        public virtual IEnumerable<OrderDetail> OrderDetails { get; set; }
     }
 }

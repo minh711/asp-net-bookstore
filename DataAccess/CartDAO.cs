@@ -107,5 +107,11 @@ namespace DataAccess
             }
         }
 
+        public int CountTotal(int accountId)
+        {
+            using var context = new PRN_Group03Context();
+            int totalQuantity = context.Carts.Where(cart => cart.AccountId == accountId).Sum(cart => cart.Quantity);
+            return totalQuantity;
+        }
     }
 }

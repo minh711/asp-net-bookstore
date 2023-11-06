@@ -9,8 +9,6 @@ namespace DataAccess
 {
     public class BookDAO
     {
-
-
         private static BookDAO instance = null;
         private static readonly object instanceLock = new object();
         public static BookDAO Instance
@@ -31,7 +29,6 @@ namespace DataAccess
 
         //-------------------------------------------------------------
 
-
         public IEnumerable<Book> GetAll()
         {
 
@@ -47,8 +44,8 @@ namespace DataAccess
             }
             return books;
         }
-        //---------------------------------------------------
 
+        //---------------------------------------------------
 
         public Book GetBook(int id)
         {
@@ -66,9 +63,7 @@ namespace DataAccess
             return book;
         }
 
-
         //--------------------------------------------------------
-
 
         public void AddNew(Book book)
         {
@@ -94,7 +89,6 @@ namespace DataAccess
 
         //--------------------------------------------------------------
 
-
         public void Update(Book book)
         {
             try
@@ -103,7 +97,7 @@ namespace DataAccess
                 if (book1 != null)
                 {
                     using var context = new PRN_Group03Context();
-                    context.Books.Add(book);
+                    context.Books.Update(book);
                     context.SaveChanges();
                 }
                 else
@@ -119,9 +113,7 @@ namespace DataAccess
 
         }
 
-
         //------------------------------------------------------------------------------
-
 
         public void Delete(int bookID)
         {
@@ -142,15 +134,7 @@ namespace DataAccess
             catch (Exception e)
             {
                 throw new Exception(e.Message);
-
             }
         }
-
-
-
-
-
-
-
     }
 }
